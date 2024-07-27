@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/back">
+
+    <ImageView
+        android:id="@+id/iteam_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_placeholder"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/iteam_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iteam Name"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/iteam_image"
+        android:layout_alignTop="@id/iteam_image"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/iteam_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iteam Type"
+        android:textSize="14sp"
+        android:layout_below="@id/iteam_name"
+        android:layout_alignStart="@id/iteam_name"/>
+
+    <TextView
+        android:id="@+id/iteam_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Description:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@id/iteam_type"
+        android:layout_alignStart="@id/iteam_type"/>
+
+    <TextView
+        android:id="@+id/iteam_description_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textSize="14sp"
+        android:layout_below="@id/iteam_description"
+        android:layout_alignStart="@id/iteam_description"/>
+
+    <TextView
+        android:id="@+id/iteam_price_per_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Price per day:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@id/iteam_description_value"
+        android:layout_alignStart="@id/iteam_description_value"/>
+
+    <TextView
+        android:id="@+id/iteam_price_per_day_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textSize="14sp"
+        android:layout_below="@id/iteam_price_per_day"
+        android:layout_alignStart="@id/iteam_price_per_day"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/iteam_price_per_day_value">
+
+        <ImageButton
+            android:id="@+id/edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:contentDescription="Edit"
+            android:src="@android:drawable/ic_menu_edit"
+            android:visibility="gone" /> <!-- Hide by default -->
+
+        <ImageButton
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Delete"
+            android:src="@android:drawable/ic_menu_delete"
+            android:visibility="gone" /> <!-- Hide by default -->
+    </LinearLayout>
+</RelativeLayout>
